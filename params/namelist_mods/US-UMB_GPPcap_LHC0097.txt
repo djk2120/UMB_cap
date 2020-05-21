@@ -1,0 +1,2 @@
+! user_nl_clm namelist options written by generate_params:
+jmaxb1=0.21430786056154189
