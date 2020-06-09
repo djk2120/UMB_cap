@@ -1,9 +1,9 @@
 #!/bin/bash
 SCRIPTS_DIR="/glade/work/djk2120/ctsm_hardcode_co/cime/scripts/"
-SPINDIR="/glade/scratch/djk2120/UMBens/"
+SPINDIR="/glade/scratch/djk2120/UMBens2/"
 SCRATCH="/glade/scratch/djk2120/"
 cd $SCRIPTS_DIR
-for i in $(seq -f "%03g" 1 5)
+for i in $(seq -f "%03g" 6 15)
 do
     p="umbspin_"$i
     echo $p

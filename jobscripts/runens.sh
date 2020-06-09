@@ -2,8 +2,8 @@ SCRIPTS_DIR="/glade/work/djk2120/ctsm_hardcode_co/cime/scripts/"
 basecase="drdfclm50d89wspinsp_US-UMB_I1PtClm50SpRsGs"
 PARAMS_DIR="/glade/u/home/djk2120/umbcap/params/paramfiles/"
 NLMODS_DIR="/glade/u/home/djk2120/umbcap/params/namelist_mods/"
-BUILD_DIR="'/glade/scratch/djk2120/umbrun_001/bld'"
-RESTARTS="/glade/scratch/djk2120/UMBens/"
+BUILD_DIR="'/glade/scratch/djk2120/umbrun_006/bld'"
+RESTARTS="/glade/scratch/djk2120/UMBens2/"
 ninst=30
 
 PWD=$(pwd)
@@ -33,7 +33,7 @@ do
 
 
     cd $SCRIPTS_DIR
-    if [ $s -eq 1 ]
+    if [ $s -eq 6 ]
     then
 	./create_clone --case $casename --clone $basecase
 	cd $casename
@@ -43,7 +43,7 @@ do
 	./xmlchange NINST_LND=$ninst
 	./case.setup --reset
     else
-	./create_clone --case $casename --clone umbrun_001
+	./create_clone --case $casename --clone umbrun_006
 	cd $casename
 	./case.setup --reset
 	./xmlchange EXEROOT=$BUILD_DIR
@@ -78,7 +78,7 @@ do
 
 
     cd $SCRIPTS_DIR$casename
-    if  [ $s -eq 1 ]
+    if  [ $s -eq 6 ]
     then
 	./case.build
 	./case.submit
